@@ -22,7 +22,7 @@ def launch_instance(ami='ami-07ebfd5b3428b6f4d',
 
     cmd = None
     #ec2 = boto.connect_ec2()
-    ec2 = boto.connect_ec2(debug=2)
+    ec2 = boto.connect_ec2()
 
     # Verifique se o par de chaves especificado ja' existe.
     # Se recebermos novamente um erro InvalidKeyPair.NotFound do EC2,
