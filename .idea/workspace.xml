@@ -18,6 +18,13 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/eucalyptus/euca2ools.git" />
+      </set>
+    </option>
+  </component>
   <component name="ProjectId" id="1ZpB1nCFGjr86brWn5BE2bpsePt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -59,10 +66,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Subindo instancia EC2 em US-EAST-1 via script python" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="883" y="102" width="786" height="850" key="CommitChangelistDialog2" timestamp="1585531089184">
+    <state x="883" y="102" width="786" height="850" key="CommitChangelistDialog2" timestamp="1585531193819">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
-    <state x="883" y="102" width="786" height="850" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1585531089184" />
+    <state x="883" y="102" width="786" height="850" key="CommitChangelistDialog2/0.0.1920.1044@0.0.1920.1044" timestamp="1585531193819" />
     <state x="1071" y="448" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585531072870">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
