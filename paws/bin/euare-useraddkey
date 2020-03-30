@@ -1,0 +1,4 @@
+#!/media/ciro/LOCALDRV/A_DESENVOLVIMENTO/AWS/receitas/paws/bin/python -tt
+# EASY-INSTALL-SCRIPT: 'euca2ools===3.4.1-2-g6b3f62f2','euare-useraddkey'
+__requires__ = 'euca2ools===3.4.1-2-g6b3f62f2'
+__import__('pkg_resources').run_script('euca2ools===3.4.1-2-g6b3f62f2', 'euare-useraddkey')
