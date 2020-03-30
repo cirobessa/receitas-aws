@@ -37,16 +37,15 @@ def launch_instance(ami='ami-07ebfd5b3428b6f4d',
             key = ec2.create_key_pair(key_name)
 
             # A AWS armazenara a chave publica, mas a chave privada eh
-            # gerada e retornada e precisa ser armazenado localmente.
-            # Use o parametro de chmod 400 no arquivo para proteger
-            # sua chave privada.
+            # gerada e retornada. Devendo ser armazenada localmente.
+            # Salver o Arquivo da chave, com permissao de leitura somente
+            # o proprietario do arquivo via chmod 400
             key.save(key_dir)
         else:
             raise
 
-    # Verifique se o "Security Group" especificado ja existe.
-    # Se recebermos novamente um erro InvalidGroup.NotFound do EC2,
-    # significa que nao existe e precisamos cria-lo.
+# Verifique se o "Security Group" especificado ja existe.
+# Se nao existe sera criado
     try:
         group = ec2.get_all_security_groups(groupnames=[group_name])[0]
     except ec2.ResponseError, e:
@@ -60,8 +59,8 @@ def launch_instance(ami='ami-07ebfd5b3428b6f4d',
             raise
 
 
-    # Adicione uma regra ao "Security Group" para autorizar o tráfego SSH
-    # na porta especificada.
+# Adicione uma regra ao "Security Group" para autorizar o trafego SSH
+# na porta especificada.
     try:
         group.authorize('tcp', ssh_port, ssh_port, cidr)
     except ec2.ResponseError, e:
@@ -72,22 +71,22 @@ def launch_instance(ami='ami-07ebfd5b3428b6f4d',
             raise
 
 
-    # Agora inicia a instância. O método run_instances
-    # tem muitos parâmetros, mas é tudo o que precisamos
-    # por enquanto.
+# Agora inicia a instancia. O metodo run_instances
+# tem muitos parametros, mas e tudo o que precisamos
+# por enquanto.
     reservation = ec2.run_instances(ami,
                                     key_name=key_name,
                                     security_groups=[group_name],
                                     instance_type=instance_type,
                                     user_data=user_data)
 
-    # Encontre o objeto Instância real dentro do objeto Reserva
-    # retornado por EC2.
+# Encontre o objeto Instancia real dentro do objeto Reserva
+# retornado por EC2.
 
     instance = reservation.instances[0]
 
-    # A instância foi lançada, mas ainda não está pronta.
-    # corrida. Vamos aguardar que seu estado mude para 'running'.
+# A instancia foi lancada, mas ainda nao esta pronta.
+# corrida. Vamos aguardar que seu estado mude para 'running'.
 
     print
     'Esperando pela Instancia'
@@ -100,13 +99,13 @@ def launch_instance(ami='ami-07ebfd5b3428b6f4d',
     'done'
 
 
-    # Vamos marcar a instância com o rótulo especificado para que possamos
-    # identifique-o mais tarde.
+# Vamos marcar a instancia com a TAG  especificado para que possamos
+# identificar mais tarde.
     instance.add_tag(tag)
 
 
-    # A instância está em execução agora, vamos tentar programaticamente
-    # SSH para a instância usando o Paramiko via boto CmdShell.
+# A instancia esta em execucao agora, vamos tentar programaticamente
+# SSH para a instancia usando o Paramiko via boto CmdShell.
 
     if cmd_shell:
         key_path = os.path.join(os.path.expanduser(key_dir),
