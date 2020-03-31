@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0f7930f-1310-43ed-a86c-3e2cd0c2b0b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/receitas-aws/cria-instancia-EC2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cria-EC2_versao2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lanca_instancia.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,7 +17,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/receitas-aws" />
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="GithubPullRequestsUISettings">
@@ -75,14 +73,22 @@
       <option name="project" value="LOCAL" />
       <updated>1585531194557</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="correcoes 4">
+      <created>1585605177213</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1585605177213</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Subindo instancia EC2 em US-EAST-1 via script python" />
     <MESSAGE value="correcoes 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="correcoes 3" />
+    <MESSAGE value="correcoes 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="correcoes 4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="874" y="190" width="804" height="675" key="#Notifications" timestamp="1585531210581">
@@ -102,10 +108,11 @@
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="1136" y="182" width="513" height="588" key="RollbackChangesDialog/1920.0.1920.1080/0.0.1920.1044@0.0.1920.1044" timestamp="1585602168034" />
-    <state x="874" y="264" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1585531199570">
+    <state x="874" y="264" width="804" height="526" key="Vcs.Push.Dialog.v2" timestamp="1585605497015">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
     <state x="874" y="264" width="804" height="526" key="Vcs.Push.Dialog.v2/0.0.1920.1044@0.0.1920.1044" timestamp="1585531199570" />
+    <state x="874" y="264" key="Vcs.Push.Dialog.v2/1920.0.1920.1080/0.0.1920.1044@0.0.1920.1044" timestamp="1585605497015" />
     <state x="1071" y="448" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585605246621">
       <screen x="0" y="0" width="1920" height="1044" />
     </state>
